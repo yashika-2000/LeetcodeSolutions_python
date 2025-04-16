@@ -1,0 +1,7 @@
+def plusOne(digits):
+    int_result = int(''.join(map(str, digits)))
+    res=int_result+1
+    result=list(map(int, str(res)))
+    return result
+digits=[1, 2, 3, 4, 5]
+print(plusOne(digits))
