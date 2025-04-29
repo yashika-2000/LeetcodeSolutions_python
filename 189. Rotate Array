@@ -1,0 +1,9 @@
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        n=len(nums)
+        newArray = [None] * n
+        for i in range(0, n):
+            newIndex = (i+k) % n 
+            newArray[newIndex] = nums[i]
+        for i in range(n):
+            nums[i] = newArray[i]
