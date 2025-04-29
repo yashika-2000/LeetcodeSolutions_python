@@ -1,0 +1,22 @@
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        seen = set()
+        idx = 0
+
+        for i in range(len(nums)):
+            if nums[i] not in seen:
+                seen.add(nums[i])
+                nums[idx] = nums[i]
+                idx += 1
+        return idx
+
+        newSize = removeDuplicates(nums)
+    
+        print(newSize)
+        k=len(nums)-newSize
+    
+        print(k,end=" ")
+        for i in range(newSize):
+            print(nums[i], end=" ")
+        for i in range(newSize,len(nums)):
+            print('_',end=" ")
