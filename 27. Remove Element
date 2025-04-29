@@ -1,0 +1,17 @@
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        def rel(nums,val):
+            count=0
+            for i in range(len(nums)):
+                if val in nums:
+                    nums.remove(val)
+                    count=count+1
+            return count
+
+        n=len(nums)
+        newSize=len(nums)-rel(nums,val)
+        print(newSize,end=" ")
+        for i in range(newSize):
+            print(nums[i], end=" ")
+        for i in range(newSize,n):
+            print('_',end=" ")
